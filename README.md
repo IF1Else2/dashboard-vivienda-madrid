@@ -1,4 +1,4 @@
-# dashboard-vivienda-madrid
+# Dashboard del coste de la vivienda en Madrid
 Dashboard interactivo en Power BI que analiza el coste de la vivienda por distrito en Madrid, cruzando precio y renta para medir el esfuerzo real de acceso.
 
 # El coste de la vivienda en Madrid — Dashboard en Power BI
@@ -27,12 +27,9 @@ Fuentes públicas del **Ayuntamiento de Madrid**:
 > recientes disponibles de cada una, y esta limitación se declara explícitamente en el
 > propio dashboard.
  
-## Qué hice (técnicas aplicadas)
+## Técnicas aplicadas
  
-- **Power Query** — limpieza y transformación de dos fuentes de datos crudas: eliminación
-  de filas y columnas irrelevantes, filtrado de barrios para quedarme solo con los 21
-  distritos, corrección de formatos numéricos españoles (coma decimal) y normalización de
-  los nombres de distrito para que ambas tablas cruzaran correctamente.
+- **Power Query** — limpieza y transformación de dos fuentes de datos crudas.
 - **Modelado de datos** — relación entre las tablas de precio y renta a través del campo
   común (distrito).
 - **DAX** — medidas calculadas para el precio de un piso de 80 m², el esfuerzo de acceso
@@ -41,13 +38,6 @@ Fuentes públicas del **Ayuntamiento de Madrid**:
   salarios anuales y ver cómo cambia el esfuerzo de acceso en tiempo real.
 - **Diseño del dashboard** — tarjetas KPI, gráficos comparativos, tabla de detalle y
   formato condicional.
-## Un problema que resolví (y por qué importa)
- 
-Al principio el cálculo del esfuerzo daba valores imposibles (cientos de años). Investigando,
-descubrí que un distrito (San Blas-Canillejas) estaba escrito de forma distinta en las dos
-tablas — con y sin espacios alrededor del guion —, así que no cruzaba y rompía el modelo.
-Lo corregí normalizando el texto. Detectar este tipo de inconsistencias es una parte central
-del trabajo real con datos.
  
 ## Qué se descubre
  
