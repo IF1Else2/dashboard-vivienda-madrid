@@ -16,48 +16,55 @@ distrito y que permite simular distintos niveles de salario.
  
 ## Los datos
  
-Fuentes públicas del **Ayuntamiento de Madrid**:
+Fuentes públicas del Ayuntamiento de Madrid y del INE:
  
-- **Precio de la vivienda** por distrito (€/m²) - 2025.
-- **Renta media por hogar** por distrito - 2022 (último dato disponible).
-**Supuesto de cálculo:** vivienda tipo de **80 m²**.
+- **Precio de la vivienda por distrito (€/m²)** — Ayuntamiento de Madrid. Años 2023 y 2025. Precio de oferta (valor anunciado), calculado como media de los doce meses de cada año.
+- **Renta media por hogar por distrito** — INE, Atlas de Distribución de Renta de los Hogares (ADRH). Año 2023 (dato definitivo).
+- **Supuesto de cálculo:** vivienda tipo de 80 m².
  
-> Nota sobre las fuentes: los datos de precio (2025) y renta (2022) no son del mismo año
-> porque las estadísticas públicas se actualizan a distinto ritmo. Se usaron los datos más
-> recientes disponibles de cada una, y esta limitación se declara explícitamente en el
-> propio dashboard.
+**Nota metodológica sobre la coherencia temporal:** el indicador principal de esfuerzo (años de sueldo) empareja precio y renta del **mismo año (2023)**, de modo que numerador y denominador son comparables y el resultado no queda distorsionado por diferencias de fecha entre fuentes. Los datos de 2025 se utilizan exclusivamente en el análisis de evolución de precios, siempre comparando precio contra precio de la misma serie.
+ 
+**Nota sobre el tipo de precio:** se trata de precios de oferta (lo que se pide en los anuncios), no de precios de transacción cerrada. Reflejan correctamente la tendencia y las diferencias entre distritos, si bien el precio real de las operaciones puede ser algo inferior.
  
 ## Técnicas aplicadas
  
 - **Power Query** - limpieza y transformación de dos fuentes de datos crudas.
 - **Modelado de datos** - relación entre las tablas de precio y renta a través del campo
   común (distrito).
-- **DAX** - medidas calculadas para el precio de un piso de 80 m², el esfuerzo de acceso
-  (años de sueldo) y los valores agregados de las tarjetas (media, máximo y mínimo).
+- **DAX** - medidas y columnas calculadas para el precio de un piso de 80 m², el esfuerzo de acceso (años de sueldo), el incremento porcentual de precios 2023-2025 y los valores agregados de las tarjetas (media, máximo y mínimo).
 - **Parámetro interactivo** - un control deslizante (slider) que permite simular distintos
   salarios anuales y ver cómo cambia el esfuerzo de acceso en tiempo real.
 - **Diseño del dashboard** - tarjetas KPI, gráficos comparativos, tabla de detalle y
   formato condicional.
  
+## Estructura del dashboard
+ 
+### Página 1 — Accesibilidad (¿cuánto cuesta acceder a una vivienda?)
+Tarjetas KPI, años de sueldo según renta del hogar, años de sueldo según el salario seleccionado en el deslizador, y tabla de detalle por distrito. Datos de 2023.
+ 
+### Página 2 — Evolución de precios (¿cuánto ha subido la vivienda? 2023-2025)
+Subida del precio por distrito en porcentaje (ordenada de mayor a menor) y comparativa de precio por m² entre 2023 y 2025.
+ 
 ## Qué se descubre
  
-- **El esfuerzo de acceso más alto (según renta del hogar) está en el Centro**, seguido de
-  Salamanca y Chamberí.
-- **Salamanca tiene la vivienda más cara, pero no la renta más alta** - esa es Chamartín.
-  El precio del metro cuadrado no refleja necesariamente el poder adquisitivo de quien vive
-  en el distrito.
-- **Con un salario joven de 21.000 €**, comprar un piso de 80 m² supera de media los
-  **19 años de sueldo íntegro** - y eso dedicando el 100 % del salario, sin gastar en nada
-  más. En la práctica, inalcanzable.
+**Sobre la accesibilidad (2023):**
+ 
+- El esfuerzo de acceso más alto según renta del hogar está en el **Centro**, seguido de **Salamanca** y **Chamberí**.
+- **Salamanca** tiene la vivienda más cara, pero no la renta más alta — esa es **Chamartín**. El precio del metro cuadrado no refleja necesariamente el poder adquisitivo de quien vive en el distrito.
+- Con un salario joven de 21.000 €, comprar un piso de 80 m² supera de media los **14 años de sueldo íntegro**, y eso dedicando el 100 % del salario sin gastar en nada más. En la práctica, inalcanzable.
+**Sobre la evolución de precios (2023-2025):**
+ 
+- El precio de la vivienda ha subido en **todos los distritos sin excepción**, con incrementos que van aproximadamente del **30 % al 50 % en solo dos años**.
+- Las subidas más pronunciadas no están en los distritos más caros, sino en algunos de los **más asequibles** (como Usera y Moratalaz). Esto reduce la oferta de vivienda económica y presiona a los hogares con menor poder adquisitivo.
+- El dato más preocupante surge al comparar con los ingresos: mientras los precios crecieron entre un 30 % y un 50 %, la renta de los hogares aumentó en torno a un 7 % anual (~14 % en el periodo). **La vivienda se ha encarecido a un ritmo dos o tres veces superior al de los salarios**, lo que agrava el esfuerzo de acceso año tras año.
 ## Herramientas
  
-`Power BI` · `Power Query (M)` · `DAX` · `Modelado de datos` · Datos abiertos del Ayuntamiento de Madrid
+`Power BI` · `Power Query (M)` · `DAX` · `Modelado de datos` · Datos abiertos del Ayuntamiento de Madrid · INE (Atlas de Distribución de Renta de los Hogares)
  
 ## Contenido del repositorio
  
 - `dashboard-vivienda-madrid.pbix` - el archivo de Power BI.
 - `dashboard.png` - captura del dashboard.
-- `dashboard.pdf` - versión en PDF.
 - `datos/` - los archivos de datos utilizados (precio y renta).
 ---
  
