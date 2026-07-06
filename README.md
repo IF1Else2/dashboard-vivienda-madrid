@@ -19,10 +19,10 @@ distrito y que permite simular distintos niveles de salario.
 Fuentes públicas del Ayuntamiento de Madrid y del INE:
  
 - **Precio de la vivienda por distrito (€/m²)** — Ayuntamiento de Madrid. Años 2023 y 2025. Precio de oferta (valor anunciado), calculado como media de los doce meses de cada año.
-- **Renta media por hogar por distrito** — INE, Atlas de Distribución de Renta de los Hogares (ADRH). Año 2023 (dato definitivo).
+- **Renta media por hogar por distrito** — INE, Atlas de Distribución de Renta de los Hogares (ADRH). Año 2023.
 - **Supuesto de cálculo:** vivienda tipo de 80 m².
  
-**Nota metodológica sobre la coherencia temporal:** el indicador principal de esfuerzo (años de sueldo) empareja precio y renta del **mismo año (2023)**, de modo que numerador y denominador son comparables y el resultado no queda distorsionado por diferencias de fecha entre fuentes. Los datos de 2025 se utilizan exclusivamente en el análisis de evolución de precios, siempre comparando precio contra precio de la misma serie.
+**Nota metodológica: El cálculo del esfuerzo de acceso utiliza precios de la vivienda y renta del hogar del mismo año (2023) para garantizar la comparabilidad de los datos. Los precios de 2025 se emplean únicamente en el análisis de la evolución del mercado inmobiliario, ya que no existen datos de renta del hogar igualmente actualizados.
  
 **Nota sobre el tipo de precio:** se trata de precios de oferta (lo que se pide en los anuncios), no de precios de transacción cerrada. Reflejan correctamente la tendencia y las diferencias entre distritos, si bien el precio real de las operaciones puede ser algo inferior.
  
