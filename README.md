@@ -1,11 +1,6 @@
-# Dashboard del coste de la vivienda en Madrid
-Dashboard interactivo en Power BI que analiza el coste de la vivienda por distrito en Madrid, cruzando precio y renta para medir el esfuerzo real de acceso.
-
 # El coste de la vivienda en Madrid - Dashboard en Power BI
  
-Dashboard interactivo que analiza el coste de acceso a la vivienda en los 21 distritos
-de Madrid, cruzando el **precio de la vivienda** con la **renta de los hogares** para
-calcular cuántos años de sueldo íntegro cuesta comprar un piso en cada distrito.
+Dashboard interactivo que analiza el coste de acceso a la vivienda en los 21 distritos de Madrid, cruzando el precio de la vivienda con la renta de los hogares para calcular cuántos años de sueldo íntegro cuesta comprar un piso en cada distrito. Incluye además un análisis de la evolución de los precios entre 2023 y 2025.
  
 ## ¿Por qué este proyecto?
  
