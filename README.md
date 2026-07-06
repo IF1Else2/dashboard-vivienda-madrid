@@ -63,7 +63,7 @@ Subida del precio por distrito en porcentaje (ordenada de mayor a menor) y compa
  
 ## Contenido del repositorio
  
-- `dashboard-vivienda-madrid.pbix` - el archivo de Power BI.
+- `dashboard-vivienda-madrid-2023.pbix` - el archivo de Power BI.
 - `dashboard-evolución-precio-vivienda-2023-2025.png`,`dashboard-accesibilidad-vivienda-2023.png` - capturas del dashboard.
 - `datos/` - los archivos de datos utilizados (precio y renta).
 ---
